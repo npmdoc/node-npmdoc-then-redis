@@ -1,6 +1,6 @@
 # npmdoc-then-redis
 
-#### api documentation for  [then-redis (v2.0.1)](https://github.com/mjackson/then-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-then-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-then-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-then-redis.svg)](https://travis-ci.org/npmdoc/node-npmdoc-then-redis)
+#### basic api documentation for  [then-redis (v2.0.1)](https://github.com/mjackson/then-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-then-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-then-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-then-redis.svg)](https://travis-ci.org/npmdoc/node-npmdoc-then-redis)
 
 #### Promise-based Redis client
 
@@ -82,7 +82,8 @@
         "release": "node ./scripts/release.js",
         "test": "npm run lint && mocha --compilers js:babel-register --reporter spec 'modules/**/*-test.js'"
     },
-    "version": "2.0.1"
+    "version": "2.0.1",
+    "bin": {}
 }
 ```
 
