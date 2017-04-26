@@ -129,7 +129,17 @@
   if (config.database) _this.select(config.database);
   return _this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+'use strict';
+
+exports.Client = require('./Client');
+
+exports.createClient = function (options) {
+  return new exports.<span class="apidocCodeKeywordSpan">Client</span>(options);
+};
+...</pre></li>
     </ul>
 
 
@@ -144,7 +154,22 @@
     <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
   return new exports.Client(options);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+_this.port = parseInt(config.port, 10) || 6379;
+_this.host = config.host || '127.0.0.1';
+
+if (config.password) config.auth_pass = config.password;
+
+if (config.returnBuffers) config.return_buffers = true;
+
+var redisClient = _redis2.default.<span class="apidocCodeKeywordSpan">createClient</span>(_this.port, _this.host, config);
+
+AllEvents.forEach(function (eventName) {
+  redisClient.on(eventName, _this.emit.bind(_this, eventName));
+}, _this);
+
+_this._redisClient = redisClient;
+...</pre></li>
     </ul>
 
 
